@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;800;900&display=swap');
 * {
     box-sizing: border-box;
     padding: 0;
@@ -6,5 +7,440 @@
 
 body {
     width: 100%;
-    background-color: #ff0000;
+    background-color: #FFF;
+    overflow: scroll;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.upper-banner, .bottom-banner {
+    box-shadow: inset 0 0 0 1000px rgba(255, 67, 67, 0.8);
+    background-image: url(../img/upper-banner-vector.png);
+    background-size: cover;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upper-banner > button, .bottom-banner > button {
+    color: #A4080E;
+    border: none;
+    font-size: 35px;
+    font-weight: 800;
+    height: 68px;
+    width: 241.58px;
+    border-radius: 14.4474px;
+    background-color: #FFF;
+    position: absolute;
+    right: 78px;
+}
+
+.upper-banner > p, .bottom-banner > p {
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 49px;
+    position: absolute;
+    left: 78px;
+}
+
+.upper-banner > p > span, .bottom-banner > p > span {
+    font-weight: 800;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: #FFF;
+    padding: 0 78px;
+}
+
+nav > .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav > .logo {
+    width: 18vw;
+}
+
+nav > .logo > img {
+    width: 100%;
+}
+
+nav > ul > li {
+    list-style: none;
+    margin: vw;
+}
+
+nav > ul > li > a:hover {
+    color: #FFF;
+    background-color: #A4080E;
+    border-radius: 30px;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24.38px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-banner {
+    width: 100%;
+    height: 805px;
+    background-image: url(../img/main-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: flex-start;
+    justify-content: center;
+    margin: 0 75px;
+}
+
+.main-banner > .main-banner-text {
+    width: 30%;
+} 
+
+.main-banner > .main-banner-text > .box-1 > h2 {
+    font-size: 47.5px;
+    font-weight: 300;
+    color: #171620;
+    line-height: 63px;
+}
+
+.main-banner > .main-banner-text > .box-1 > h2 > span {
+    font-weight: 900;
+}
+
+.main-banner > .main-banner-text > p {
+    font-weight: 300;
+    font-size: 30px;
+    color: #000;
+    margin: 50px 0;
+}
+
+.main-banner > .main-banner-text > button {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 52.96px;
+    background-color: #A4080E;
+    color: #FFF;
+    width: 340px;
+    height: 53px;
+    border-radius: 15px;
+    text-transform: capitalize;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border: none;
+}
+
+.how-it-works-banner {
+    width: 100%;
+    height: 65vh;
+    background-color: #A4080E;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+}
+
+.how-it-works-banner > h2 {
+    width: 405px;
+    height: 71px;
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 132.4%;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid #FFF;
+    border-radius: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.how-it-works-banner > .box-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.how-it-works-banner > .box-1 > .box-1-1, .box-1-2, .box-1-3 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 25%;
+}
+
+.how-it-works-banner > .box-1 > .box-1-1 > img, .box-1-2 > img, .box-1-3 > img {
+    width: 50%;
+    
+}
+
+.how-it-works-banner > .box-1 > .box-1-1 > h3, .box-1-2 > h3, .box-1-3 > h3 {
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.how-it-works-banner > .box-1 > .box-1-1 > p, .box-1-2  > p, .box-1-3  > p  {
+    font-size: 23.2px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: center;
+}
+
+.productivity-tracker-banner {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    background-color: #F5F5F5;
+    height: 640px;
+}
+
+.productivity-tracker-banner > .box-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    width: 30vw;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.productivity-tracker-banner > .box-1 > h2 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 48.76px;
+    text-transform: capitalize;
+    color: #A4080E;
+}
+
+.productivity-tracker-banner > .box-1 > p {
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.productivity-tracker-banner > .box-1 > ul > li {
+    font-size: 25px;
+    font-weight: 800;
+    color: #171620;
+}
+
+.aspects-of-a-va-banner {
+    background-image: url(../img/VA-banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90vh;
+}
+
+.aspects-of-a-va-banner > .box-1 > h2 {
+    font-size: 40px;
+    line-height: 51px;
+    font-weight: 800;
+    color: #171620;
+}
+
+.aspects-of-a-va-banner .box-1 > h2 > span {
+    background-color: #A4080E;
+    color: #FFF;
+}
+
+.aspects-of-a-va-banner > .box-1 {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.aspects-of-a-va-banner > .box-1 > .box-1-1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.aspects-of-a-va-banner > .box-1 > .box-1-1 > ul > li {
+    font-family: 'Montserrat', sans-serif;
+    color:#171620;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 132.4%;
+    gap: 11.6vh;
+    display: flex;
+    align-items: flex-start;
+}
+
+.benefits-banner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-image: url(../img/connections-vector.png);
+    background-position: ;
+}
+
+.benefits-banner > .box-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    height: 15vh;
+}
+
+.benefits-banner > .box-1 > h2 {
+    font-size: 51.79px;
+    font-weight: 800;
+}
+
+.benefits-banner > .box-2 {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    height: 40vh;
+    align-items: center;
+    justify-content: space-evenly;   
+}
+
+.benefits-banner > .box-2 > .box-2-1, .box-2 > .box-2-2, .box-2 > .box-2-3, .box-2 > .box-2-4, .box-2 > .box-2-5 {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+}
+
+.benefits-banner > .box-2 > .box-2-1 > img, .box-2-2 > img, .box-2-3 > img, .box-2-4 > img, .box-2-5 > img {
+    width: 80px;
+
+}
+
+.benefits-banner > .box-2 > .box-2-1 > span, .box-2-2 > span, .box-2-3 > span, .box-2-4 > span, .box-2-5 > span {
+    font-size: 21.4px;
+    font-weight: 400;
+    color: #171620
+    ;
+}
+
+.benefits-banner > button {
+    background-color: #A4080E;
+    color: #FFF;
+    font-size: 25.9px;
+    border: none;
+    border-radius: 15.5389px;
+    width: 260.02px;
+    height: 58.01;
+}
+
+.contact-form { 
+    width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position: center center;
+    box-shadow: inset 0 0 0 1000px rgba(164, 8, 14, 0.7);
+    background-image: url(../img/waves-vector.png);
+}
+
+.contact-form > h2 {
+    color: #FFF;
+    width: 700px;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 132.4%;
+    border: 1px solid #FFF;
+    border-radius: 61px;
+    text-align: center;
+}
+
+.contact-form > h3 {
+    background-color: #FFF;
+    width: 570px;
+    border-radius: 61px;
+    text-align: center;
+    color: #A4080E;
+    height: 51px;
+}
+
+.contact-form > input {
+    width: 785px;
+    border-radius: 25px;
+    margin: 1rem;
+    height: 77px;
+    border: none;
+    color: #FFF;
+    background-color: rgba(221, 39, 45, 0.2);
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.contact-form > button {
+    background-color: #FFF;
+    color: #A4080E;
+    font-size: 40px;
+    width: 262px;
+    border: none;
+    font-weight: 800;
+    border-radius: 61px;
+    text-align: center;
+    margin: 1rem;
+}
+
+footer {
+    background-image: url(../img/buildings.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: inset 0 0 0 10000px rgba(23, 22, 32, 0.8);
+    width: 100%;
+    height: 453px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: rgba(255, 255, 255, 1);
+}
+
+footer > .box-1 > #iw-white-logo {
+    width: 308px;
+    margin: 2rem 0;
+}
+
+footer > .box-1, .box-2, .box-3 {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    text-align: justify;
+    align-items: center;
+}
+
+footer > .box-3 > .box-3-1 {
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+}
+
+footer > .box-2 > .box-2-1 > img, .box-2-2 > img {
+    width: 1rem;
+}
+
+footer > .box-2 > .box-2-1, .box-2-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 }
