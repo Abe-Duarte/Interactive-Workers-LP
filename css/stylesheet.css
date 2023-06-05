@@ -10,6 +10,7 @@ body {
     background-color: #FFF;
     overflow: scroll;
     font-family: 'Montserrat', sans-serif;
+    overflow: scroll;
 }
 
 .upper-banner, .bottom-banner {
@@ -64,6 +65,8 @@ nav > .nav-links {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
+    width: 50vw;
 }
 
 nav > .logo {
@@ -154,7 +157,7 @@ nav > ul > li > a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10vh;
+    gap: 5vh;
 }
 
 .how-it-works-banner > h2 {
@@ -180,7 +183,7 @@ nav > ul > li > a {
     width: 80%;
 }
 
-.how-it-works-banner > .box-1 > .box-1-1, .box-1-2, .box-1-3 {
+.how-it-works-banner > .box-1 > .box-1-1, .box-1 > .box-1-2, .box-1 > .box-1-3 {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -190,7 +193,8 @@ nav > ul > li > a {
 
 .how-it-works-banner > .box-1 > .box-1-1 > img, .box-1-2 > img, .box-1-3 > img {
     width: 50%;
-    
+    align-self: center;
+    margin: 40px 0;
 }
 
 .how-it-works-banner > .box-1 > .box-1-1 > h3, .box-1-2 > h3, .box-1-3 > h3 {
@@ -243,46 +247,64 @@ nav > ul > li > a {
     color: #171620;
 }
 
-.aspects-of-a-va-banner {
-    background-image: url(../img/VA-banner.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+.va-banner {
     width: 100%;
     height: 90vh;
+    background-image: url(../img/VA-banner.png);
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.aspects-of-a-va-banner > .box-1 > h2 {
-    font-size: 40px;
-    line-height: 51px;
-    font-weight: 800;
+.va-banner > .box-1 {
+    margin: 0 0 3vh 7vw;
     color: #171620;
-}
-
-.aspects-of-a-va-banner .box-1 > h2 > span {
-    background-color: #A4080E;
-    color: #FFF;
-}
-
-.aspects-of-a-va-banner > .box-1 {
     display: flex;
     flex-direction: column;
-    
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
 }
 
-.aspects-of-a-va-banner > .box-1 > .box-1-1 {
+.va-banner > .box-1 > .box-1-1 > h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin: 0 3vw;
+}
+
+.va-banner > .box-1 > .box-1-1 > h2 > span {
+    color: #FFF;
+    background-color: #A4080E;
+    padding: 0 5px;
+}
+
+.va-banner > .box-1 > .box-1-2 {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 65%;
 }
 
-.aspects-of-a-va-banner > .box-1 > .box-1-1 > ul > li {
-    font-family: 'Montserrat', sans-serif;
-    color:#171620;
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 132.4%;
-    gap: 11.6vh;
+.va-banner > .box-1 > .box-1-2 > .box-1-2-1 {
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: flex-start;
+    height: 100%;
+}
+
+.va-banner > .box-1 > .box-1-2 > .box-1-2-1 > li {
+    list-style: none;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.va-banner > .box-1 > .box-1-2 > img {
+    height: 100%;
+    width: 5px;
 }
 
 .benefits-banner {
@@ -291,9 +313,19 @@ nav > ul > li > a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
-    background-image: url(../img/connections-vector.png);
-    background-position: ;
+    height: 85vh;
+}
+
+.benefits-banner > .box-1 {
+    align-self: flex-start;
+    margin: 0 8vw;
+}
+
+.benefits-banner > img {
+    position: absolute;
+
+    z-index: -1;
+    opacity: 0.3;
 }
 
 .benefits-banner > .box-1 {
@@ -301,7 +333,7 @@ nav > ul > li > a {
     flex-direction: row;
     align-items: center;
     gap: 15px;
-    height: 15vh;
+    height: auto;
 }
 
 .benefits-banner > .box-1 > h2 {
@@ -318,15 +350,26 @@ nav > ul > li > a {
     justify-content: space-evenly;   
 }
 
-.benefits-banner > .box-2 > .box-2-1, .box-2 > .box-2-2, .box-2 > .box-2-3, .box-2 > .box-2-4, .box-2 > .box-2-5 {
+.benefits-banner > .box-2 > .box-2-1, .box-2 > .box-2-3, .box-2 > .box-2-4, .box-2 > .box-2-5 {
     display: flex;
     flex-direction: column;
     margin: 40px;
+    gap: 35px;
+    align-items: center;
+    justify-content: center;
 }
 
-.benefits-banner > .box-2 > .box-2-1 > img, .box-2-2 > img, .box-2-3 > img, .box-2-4 > img, .box-2-5 > img {
-    width: 80px;
+.benefits-banner > .box-2 > .box-2-2 {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+    gap: 35px;
+    align-items: center;
+    justify-content: center;
+}
 
+.benefits-banner > .box-2 > .box-2-1 > img, .box-2 > .box-2-2 > img, .box-2 > .box-2-3 > img, .box-2 > .box-2-4 > img, .box-2 > .box-2-5 > img {
+    width: 80px;
 }
 
 .benefits-banner > .box-2 > .box-2-1 > span, .box-2-2 > span, .box-2-3 > span, .box-2-4 > span, .box-2-5 > span {
@@ -343,12 +386,12 @@ nav > ul > li > a {
     border: none;
     border-radius: 15.5389px;
     width: 260.02px;
-    height: 58.01;
+    height: 58.01px;
 }
 
 .contact-form { 
     width: 100%;
-    height: 900px;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -366,16 +409,22 @@ nav > ul > li > a {
     line-height: 132.4%;
     border: 1px solid #FFF;
     border-radius: 61px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
 }
 
 .contact-form > h3 {
     background-color: #FFF;
     width: 570px;
     border-radius: 61px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #A4080E;
     height: 51px;
+    margin: 0 0 2rem 0;
 }
 
 .contact-form > input {
@@ -390,6 +439,12 @@ nav > ul > li > a {
     text-transform: capitalize;
 }
 
+.contact-form > input::placeholder {
+    color: #F5F5F5;
+    display: flex;
+
+}
+
 .contact-form > button {
     background-color: #FFF;
     color: #A4080E;
@@ -399,14 +454,14 @@ nav > ul > li > a {
     font-weight: 800;
     border-radius: 61px;
     text-align: center;
-    margin: 1rem;
+    margin: 2rem;
 }
 
 footer {
     background-image: url(../img/buildings.png);
     background-repeat: no-repeat;
     background-size: contain;
-    box-shadow: inset 0 0 0 10000px rgba(23, 22, 32, 0.8);
+    box-shadow: inset 0 0 0 10000px rgba(23, 22, 32, 0.2);
     width: 100%;
     height: 453px;
     display: flex;
@@ -416,31 +471,52 @@ footer {
     color: rgba(255, 255, 255, 1);
 }
 
-footer > .box-1 > #iw-white-logo {
+footer > .dark-blue-bg > .box-1 > #iw-white-logo, .box-2 > h3 {
     width: 308px;
     margin: 2rem 0;
 }
 
-footer > .box-1, .box-2, .box-3 {
+footer > .dark-blue-bg > .box-1, .box-2, .box-3 {
     display: flex;
     flex-direction: column;
     width: 25%;
     text-align: justify;
-    align-items: center;
+    align-items: flex-start;
 }
 
-footer > .box-3 > .box-3-1 {
+footer > .dark-blue-bg > .box-2 > h3, .box-3 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+footer > .dark-blue-bg > .box-3 > .social-media {
     display: flex;
     flex-direction: row;
-    width: 25%;
+    width: 169px;
+
 }
 
-footer > .box-2 > .box-2-1 > img, .box-2-2 > img {
+footer > .dark-blue-bg > .box-3 > .social-media > img {
+    width: 100%;
+}
+
+footer > .dark-blue-bg > .box-2 > .box-2-1 > img, .box-2-2 > img {
     width: 1rem;
 }
 
-footer > .box-2 > .box-2-1, .box-2-2 {
+footer > .dark-blue-bg > .box-2 > .box-2-1, .box-2 > .box-2-2 {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+}
+
+footer > .dark-blue-bg > a {
+    text-decoration: none;
+}
+
+footer > .dark-blue-bg {
+    position: relative;
+    z-index: -1;
+    background-color: rgba(23, 22, 32, 1);
+    width: 100%;
+    height: auto;
 }
