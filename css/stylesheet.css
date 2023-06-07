@@ -17,7 +17,7 @@ body {
     box-shadow: inset 0 0 0 1000px rgba(255, 67, 67, 0.8);
     background-image: url(../img/upper-banner-vector.png);
     background-size: cover;
-    height: 15vh;
+    min-height: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -29,8 +29,8 @@ body {
     border: none;
     font-size: 35px;
     font-weight: 800;
-    height: 68px;
-    width: 241.58px;
+    max-height: 68px;
+    min-width: 6em;
     border-radius: 14.4474px;
     background-color: #FFF;
     position: absolute;
@@ -43,7 +43,7 @@ body {
     font-weight: 300;
     line-height: 49px;
     position: absolute;
-    left: 78px;
+    left: 2em;
 }
 
 .upper-banner > p > span, .bottom-banner > p > span {
@@ -56,7 +56,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 10vh;
+    min-height: 12vh;
     background-color: #FFF;
     padding: 0 78px;
 }
@@ -66,11 +66,12 @@ nav > .nav-links {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    width: 50vw;
+    min-width: 60vw;
 }
 
 nav > .logo {
-    width: 18vw;
+    max-width: 18vw;
+    min-width: 15vw;
 }
 
 nav > .logo > img {
@@ -101,7 +102,8 @@ nav > ul > li > a {
 
 .main-banner {
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
+    padding: 2em;
     background-image: url(../img/main-banner.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -110,6 +112,11 @@ nav > ul > li > a {
     text-align: flex-start;
     justify-content: center;
     margin: 0 75px;
+}
+
+.main-banner > img {
+    position: absolute;
+    width: 100%;
 }
 
 .main-banner > .main-banner-text {
@@ -152,7 +159,7 @@ nav > ul > li > a {
 
 .how-it-works-banner {
     width: 100%;
-    height: 65vh;
+    min-height: 65vh;
     background-color: #A4080E;
     color: #FFF;
     display: flex;
@@ -219,7 +226,12 @@ nav > ul > li > a {
     align-items: center;
     flex-direction: row-reverse;
     background-color: #FFF;
-    height: 640px;
+    max-height: 60vh;
+    padding: 4%;
+}
+
+.productivity-tracker-banner > img {
+    height: auto;
 }
 
 .productivity-tracker-banner > .box-1 {
@@ -319,6 +331,9 @@ nav > ul > li > a {
     align-items: center;
     justify-content: center;
     height: 85vh;
+    background-image: url(../img/map-vector.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
 }
 
 .benefits-banner > .box-1 {
@@ -395,7 +410,7 @@ nav > ul > li > a {
 
 .contact-form { 
     width: 100%;
-    height: 90vh;
+    max-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -442,7 +457,7 @@ nav > ul > li > a {
     width: 785px;
     border-radius: 25px;
     margin: 1rem;
-    height: 77px;
+    height: 4em;
     border: none;
     font-weight: 40px;
     color: #FFF;
@@ -735,11 +750,98 @@ footer > .box-1 > .box-1-3 > .social-media {
     footer > .box-1 > .box-1-1 > p, .box-1-2 > .box-1-2-1 > p, .box-1 > .box-1-3 > h3 {
         font-size: 15px;
     }
-
 }
 
-@media screen and (orientation: portrait) {
-    div {
+@media (orientation: portrait) {
+       nav > .nav-links {
+        display: none;
+       }
+
+       nav {
+        justify-content: center;
+        max-height: 10vh;
+       }
+
+       nav > .logo {
+        min-width: 70%;
+       }
+
+       .upper-banner, .bottom-banner {
+        min-height: 25vh;
+        display: flex;
         flex-direction: column;
+        width: 100%;
+        padding: 2vw;
+       }
+
+       .upper-banner > p, .bottom-banner > p {
+        font-size: 2em;
+        text-align: center;       
+       }
+
+       .upper-banner > button, .bottom-banner > button {
+        font-size: 2em;
+        align-self: center;
+       }
+
+       .main-banner {
+        background-size: cover;
+        max-height: 30vh;
+        margin: 1em;
+        background-image: url(../img/mobile-main-banner.png);
+       }
+
+       .main-banner > .main-banner-text {
+        height: 40%;
+        flex-direction: column;
+       }
+
+       .how-it-works-banner {
+        min-height: 30vh;
+       }
+
+       .productivity-tracker-banner {
+        display: flex;
+        flex-direction: column;
+        padding: 10vw;
+        max-height: 100vh;
+        justify-content: center;
+        align-items: center;
+       }
+
+       .productivity-tracker-banner > .box-1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+       }
+
+       .productivity-tracker-banner > img {
+        width: 80%;
+       }
+
+       .benefits-banner {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+       }
+
+       .benefits-banner > .box-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+       }
+
+       .va-banner {
+        background-image: url(../img/mobile-va-banner.png);
+       }
+
+       footer {
+        flex-direction: column;
+        min-height: 80vh;
+        padding: 3vw;
+       }
+
     }
 }
