@@ -6,21 +6,13 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body {
-    width: 100%;
-    background-color: #FFF;
-    overflow: scroll;
-    font-family: 'Montserrat', sans-serif;
-    overflow: scroll;
-}
-
 .upper-banner, .bottom-banner {
     box-shadow: inset 0 0 0 1000px rgba(255, 67, 67, 0.8);
     background-image: url(../img/upper-banner-vector.png);
     background-size: cover;
-    min-height: 10vh;
+    min-height: 15vh;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -30,8 +22,10 @@ body {
     border: none;
     font-size: 35px;
     font-weight: 800;
-    max-height: 68px;
-    min-width: 6em;
+    display: flex;
+    width: auto;
+    padding: .5em 1em;
+    align-items: center;
     border-radius: 14.4474px;
     background-color: #FFF;
     position: absolute;
@@ -57,7 +51,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    min-height: 12vh;
+    min-height: 10vh;
     background-color: #FFF;
     padding: 0 78px;
 }
@@ -72,7 +66,6 @@ nav > .nav-links {
 
 nav > .logo {
     max-width: 18vw;
-    min-width: 15vw;
 }
 
 nav > .logo > img {
@@ -81,6 +74,7 @@ nav > .logo > img {
 
 nav > ul > li {
     list-style: none;
+    flex-wrap: wrap;
 }
 
 nav > ul > li > a:hover {
@@ -94,7 +88,7 @@ nav > ul > li > a:hover {
 nav > ul > li > a {
     text-decoration: none;
     color: #000;
-    font-size: 18px;
+    font-size: 1.25em;
     font-weight: 400;
     line-height: 24.38px;
     font-family: 'Montserrat', sans-serif;
@@ -103,21 +97,16 @@ nav > ul > li > a {
 
 .main-banner {
     width: 100%;
-    min-height: 90vh;
+    height: 90vh;
     padding: 2em;
     background-image: url(../img/main-banner.png);
     background-repeat: no-repeat;
+    overflow: hidden;
     background-size: cover;
     display: flex;
     flex-direction: column;
     text-align: flex-start;
     justify-content: center;
-    margin: 0 75px;
-}
-
-.main-banner > img {
-    position: absolute;
-    width: 100%;
 }
 
 .main-banner > .main-banner-text {
@@ -232,7 +221,7 @@ nav > ul > li > a {
 }
 
 .productivity-tracker-banner > img {
-    height: auto;
+    max-height: 50vh;
 }
 
 .productivity-tracker-banner > .box-1 {
@@ -302,6 +291,7 @@ nav > ul > li > a {
     align-items: flex-start;
     justify-content: flex-start;
     height: 65%;
+    gap: 15px;
 }
 
 .va-banner > .box-1 > .box-1-2 > .box-1-2-1 {
@@ -316,13 +306,14 @@ nav > ul > li > a {
 
 .va-banner > .box-1 > .box-1-2 > .box-1-2-1 > li {
     list-style: none;
+    
     font-size: 25px;
     font-weight: 500;
 }
 
 .va-banner > .box-1 > .box-1-2 > img {
     height: 100%;
-    width: 5px;
+    width: 10px;
 }
 
 .benefits-banner {
@@ -350,6 +341,7 @@ nav > ul > li > a {
 
 .benefits-banner > .box-1 {
     display: flex;
+    width: 40vw;
     flex-direction: row;
     align-items: center;
     gap: 15px;
@@ -411,7 +403,8 @@ nav > ul > li > a {
 
 .contact-form { 
     width: 100%;
-    max-height: 90vh;
+    height: auto;
+    padding: 10vh 2vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -603,12 +596,14 @@ footer > .box-1 > .box-1-3 {
 footer > .box-1 > .box-1-3 > .social-media {
     width: 50%;
     display: flex;
+    align-items: baseline;
     justify-content: space-around;
 }
 
 /*################# MEDIA QUERIES #######################*/
 
 @media screen and (max-width: 1400px) {
+
     .upper-banner, .bottom-banner {
         height: 12vh;
     }
@@ -764,7 +759,14 @@ footer > .box-1 > .box-1-3 > .social-media {
 }
 
 @media (orientation: portrait) {
-       nav > .nav-links {
+
+        body {
+            margin: 0;
+            max-width: 100vw;
+            overflow: scroll;
+        }
+
+        nav > .nav-links {
         display: none;
        }
 
@@ -777,16 +779,18 @@ footer > .box-1 > .box-1-3 > .social-media {
         min-width: 70%;
        }
 
-       .upper-banner, .bottom-banner {
-        min-height: 25vh;
+       .upper-banner {
+        padding: 2vw;
+        height: auto;
+        background-image: url(../img/mobile-upper-banner-vector.png);
+        background-size: cover;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
-        width: 100%;
-        padding: 2vw;
+        justify-content: center;
        }
 
        .upper-banner > p, .bottom-banner > p {
-        font-size: 2em;
         text-align: center;       
        }
 
@@ -797,25 +801,74 @@ footer > .box-1 > .box-1-3 > .social-media {
 
        .main-banner {
         background-size: cover;
-        max-height: 30vh;
-        margin: 1em;
+        min-height: 40vh;
+        padding: 2em;
         background-image: url(../img/mobile-main-banner.png);
        }
 
        .main-banner > .main-banner-text {
-        height: 40%;
+        width: 50%;
+        height: auto;
+        gap: 0;
         flex-direction: column;
        }
 
+       .main-banner > .main-banner-text > button {
+        font-size: 1.25em;
+        padding: 0 10px;
+        font-weight: 500;
+        width: auto;
+       }
+
+       .main-banner > .main-banner-text > .box-1 > h2 {
+        font-size: 1.75em;
+        line-height: 1.2;
+        width: 50vw;
+        flex-wrap: wrap;
+       }
+
+       .main-banner > .main-banner-text > p {
+        font-size: 1.25em;
+       } 
+
        .how-it-works-banner {
-        min-height: 30vh;
+        height: auto;
+        padding: 2vw;
+        justify-content: center;
+       }
+
+       .how-it-works-banner > h2 {
+        font-size: 2em;
+        width: auto;
+        padding: 0 20px;
+       }
+
+       .how-it-works-banner > .box-1 > .box-1-1 > img {
+        width: 5em;
+       }
+
+       .how-it-works-banner > .box-1 {
+        gap: 20px;
+        width: 100%;
+       }
+
+       .how-it-works-banner > .box-1 > .box-1-1 > h2 {
+        font-size: 2em;
+       }
+
+       .how-it-works-banner > .box-1 > .box-1-1 > h3 {
+        font-size: 1.3em;
+       }
+
+       .how-it-works-banner > .box-1 > .box-1-1 > p {
+        font-size: 1em;
        }
 
        .productivity-tracker-banner {
         display: flex;
         flex-direction: column;
         padding: 10vw;
-        max-height: 100vh;
+        min-height: 80vh;
         justify-content: center;
         align-items: center;
        }
@@ -835,7 +888,14 @@ footer > .box-1 > .box-1-3 > .social-media {
        .benefits-banner {
         display: flex;
         flex-direction: column;
-        min-height: auto;
+        height: auto;
+        padding: 0;
+        gap: 0;
+       }
+
+       .benefits-banner > button {
+        font-size: 2em;
+        padding: 0.4em 0.4em;
        }
 
        .benefits-banner > .box-2 {
@@ -846,13 +906,176 @@ footer > .box-1 > .box-1-3 > .social-media {
 
        .va-banner {
         background-image: url(../img/mobile-va-banner.png);
-       }
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+        .va-banner > .box-1 {
+            width: 100%;
+            padding: 0 1rem;
+            min-height: auto;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .va-banner > .box-1 > .box-1-1 {
+            margin: 3vh 0;
+        }
+
+        .va-banner > .box-1 > .box-1-2 > .box-1-2-1 {
+            gap: .5em;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .va-banner > .box-1 > .box-1-1 > h2 {
+            font-size: 1.5em;
+        }
+
+        .va-banner > .box-1 > .box-1-2 {
+            height: 40%;
+            gap: 10px;
+        }
+
+        .va-banner > .box-1 > .box-1-2 > .box-1-2-1 > li {
+            font: 1px;
+        }
+ 
+        .benefits-banner {
+            min-height: 180vh;
+            justify-content: space-between;
+            gap: 1vh;
+            background-position: center bottom;
+            padding: 5vh 5vw;
+        }
+
+        .benefits-banner > .box-1 {
+            width: 80vw;
+            padding: 1px;
+            max-height: 10vh;
+            margin: 0;
+        }
+
+        .benefits-banner > .box-1 > h2 {
+            font-size: 2em;
+        }
+
+        .benefits-banner > .box-2 {
+            gap: 1px;
+            height: auto;
+
+        }
+
+        .benefits-banner > .box-2 > .box-2-1 {
+            width: 40vw;
+        }
+
+        .benefits-banner > .box-2 > .box-2-1 > span {
+            font-size: 2em;
+        }
+
+        .benefits-banner > .box-2 > .box-2-1 > img {
+            width: 40%;
+        }
+
+        .benefits-banner > button {
+            width: 60%;
+        }
+
+        .contact-form {
+            min-height: 100vh;            
+            background-image: url(../img/mobile-contact-form-vector.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            gap: .35em;
+        }
+
+        .contact-form > h2 {
+            width: auto;
+            padding: 10px 20px;
+            font-size: 2.25rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-form > h3 {
+            width: auto;
+            padding: 10px 20px;
+            font-size: 1.85em;
+            font-weight: 400;
+            flex-wrap: wrap;
+        }
+
+        .contact-form > .inputbox {
+            width: 90vw;
+            margin: .25em;
+        }
+
+        .contact-form > .inputbox > input {
+            width: 100%;
+        }
+
+        .contact-form > button {
+            width: auto;
+            padding: 0 1em;
+            font-size: 2.5em;
+        }
 
        footer {
         flex-direction: column;
         min-height: 80vh;
-        padding: 3vw;
+        padding: .25em;
+        height: auto;
        }
 
+       footer > .box-1 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        height: auto;
+       }
+
+       footer > .box-1 > .box-1-1 {
+        width: 70vw;
+        text-align: justify;
+       }
+
+       footer > .box-1 > .box-1-1 > .interactive-logo {
+        width: 50vw;
+        align-self: center;
+       }
+
+       footer > .box-1 > .box-1-1 > p {
+        font-size: 1.25em;
+       }
+
+       footer > .box-1 > .box-1-2 {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: .5em;
+       }
+
+       footer > .box-1 > .box-1-3 {
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+       }
+
+       footer > .box-1 > .box-1-2 > h3 {
+        font-size: 1.5em;
+        margin: 0;
+        justify-content: space-evenly;
+        align-items: center;
+       }
+
+       footer > .box-1 > .box-1-3 > h3 {
+        font-size: 1.5em;
+       }
+ 
     }
 }
